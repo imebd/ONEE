@@ -1,10 +1,9 @@
-/* Configuration générale */
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #f8f6f2; /* Fond beige très clair */
+    background-color: #ede6db; /* Fond beige très clair */
     height: 100vh;
     display: flex;
     align-items: center;
@@ -19,7 +18,7 @@ body {
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(128, 0, 32, 0.05);
-    border-top: 5px solid #800020; /* Ligne supérieure bordeaux */
+    border-top: 5px solid #eae200; /* Ligne supérieure bordeaux */
     padding: 40px;
     width: 100%;
     max-width: 420px;
@@ -37,7 +36,7 @@ body {
 }
 
 .brand-title {
-    color: #800020;
+    color: #000280;
     font-weight: 700;
     letter-spacing: 1px;
     margin: 5px 0;
@@ -73,13 +72,13 @@ body {
 }
 
 .form-control:focus {
-    border-color: #800020; /* Colore la bordure en bordeaux au clic */
+    border-color: #000280; /* Colore la bordure en bordeaux au clic */
 }
 
 /* Bouton personnalisé */
 .btn-custom {
     width: 100%;
-    background-color: #800020; /* Bouton Bordeaux */
+    background-color: #000280; /* Bouton Bordeaux */
     color: white;
     border: none;
     padding: 12px;
@@ -98,7 +97,7 @@ body {
 /* Message d'erreur de sécurité rouge */
 .alert-danger {
     background-color: #f8d7da;
-    color: #721c24;
+    color: #9d0a18;
     border: 1px solid #f5c6cb;
     padding: 10px;
     border-radius: 6px;
