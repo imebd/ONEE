@@ -17,12 +17,12 @@ body {
 .login-card {
     background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(128, 0, 32, 0.05);
-    border-top: 5px solid #eae200; /* Ligne supérieure bordeaux */
+    box-shadow: 0 8px 24px rgba(0, 2, 128, 0.05);
+    border-top: 5px solid #eae200; /* Ligne supérieure Jaune */
     padding: 40px;
     width: 100%;
     max-width: 420px;
-    text-center: center;
+    text-align: center;
 }
 
 .text-center {
@@ -36,14 +36,15 @@ body {
 }
 
 .brand-title {
-    color: #000280;
+    color: #000280; /* Bleu */
     font-weight: 700;
     letter-spacing: 1px;
     margin: 5px 0;
 }
 
 .text-muted {
-    color: #6c757d;
+    color: #000280;
+    opacity: 0.7;
     font-size: 0.85rem;
     margin-bottom: 25px;
 }
@@ -57,7 +58,7 @@ body {
 .form-label {
     display: block;
     font-size: 0.85rem;
-    color: #495057;
+    color: #000280;
     margin-bottom: 8px;
 }
 
@@ -72,13 +73,13 @@ body {
 }
 
 .form-control:focus {
-    border-color: #000280; /* Colore la bordure en bordeaux au clic */
+    border-color: #000280; /* Colore la bordure en Bleu au clic */
 }
 
 /* Bouton personnalisé */
 .btn-custom {
     width: 100%;
-    background-color: #000280; /* Bouton Bordeaux */
+    background-color: #000280; /* Bouton Bleu */
     color: white;
     border: none;
     padding: 12px;
@@ -91,16 +92,160 @@ body {
 }
 
 .btn-custom:hover {
-    background-color: #5c0017;
+    background-color: #eae200; /* Changement au survol : Jaune */
+    color: #000280; /* Texte Bleu pour le contraste */
 }
 
-/* Message d'erreur de sécurité rouge */
+/* Message d'erreur de sécurité */
 .alert-danger {
-    background-color: #f8d7da;
-    color: #9d0a18;
-    border: 1px solid #f5c6cb;
+    background-color: #fffde6; /* Fond jaune très clair */
+    color: #000280; /* Texte Bleu */
+    border: 1px solid #eae200; /* Bordure Jaune */
     padding: 10px;
     border-radius: 6px;
     font-size: 0.85rem;
     margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* ==========================================
+   STYLE SPÉCIFIQUE : ESPACE EMPLOYÉ (DASHBOARD)
+   ========================================== */
+.dashboard-body {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: block ; 
+    height: auto ;
+}
+
+.header-bar {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 2, 128, 0.03);
+    border-left: 5px solid #eae200; /* Ligne gauche Jaune */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    margin-bottom: 30px;
+}
+
+.user-info h2 {
+    margin: 0;
+    color: #000280; /* Bleu */
+    font-size: 1.5rem;
+}
+
+.btn-logout {
+    background-color: #000280; /* Bouton Bleu */
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+    border: 1px solid #000280;
+}
+
+.btn-logout:hover {
+    background-color: #eae200; /* Survol Jaune */
+    color: #000280;
+    border-color: #eae200;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid { grid-template-columns: 1fr; }
+}
+
+.panel {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 2, 128, 0.03);
+}
+
+.panel-title {
+    color: #000280; /* Bleu */
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eae200; /* Ligne de séparation Jaune */
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+textarea.form-control {
+    font-family: inherit;
+    resize: vertical;
+}
+
+select.form-control {
+    font-family: inherit;
+}
+
+/* Messages d'état du ticket */
+.msg {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.msg-success { 
+    background-color: #e6f0ff; /* Bleu très clair */
+    color: #000280; 
+    border: 1px solid #000280; 
+}
+.msg-error { 
+    background-color: #fffde6; /* Jaune très clair */
+    color: #000280; 
+    border: 1px solid #eae200; 
+}
+
+/* Tableau des historiques */
+.table-tickets {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.table-tickets th, .table-tickets td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ede6db;
+}
+
+.table-tickets th {
+    background-color: #f8f6f2;
+    color: #000280; /* Bleu */
+    font-weight: bold;
+}
+
+/* Badges de statut et d'urgence */
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+}
+.badge-en_attente { 
+    background-color: #eae200; /* Jaune */
+    color: #000280; 
+}
+.badge-normal { 
+    background-color: #ede6db; /* Beige */
+    color: #000280; 
+}
+.badge-urgent { 
+    background-color: #000280; /* Bleu */
+    color: #ffffff; 
 }

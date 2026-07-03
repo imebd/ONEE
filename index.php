@@ -19,11 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['role'] = $user['role'];
 
             if ($user['role'] === 'EMPLOYE') {
-                header("Location: dashboard_employe.php");
+                header("Location: employe/dashboard_employe.php");
             } elseif ($user['role'] === 'TECHNICIEN') {
-                header("Location: dashboard_technicien.php");
+                header("Location: technicien/dashboard_technicien.php");
             } elseif ($user['role'] === 'ADMINISTRATEUR') {
-                header("Location: dashboard_admin.php");
+                header("Location: administrateur/dashboard_admin.php");
             }
             exit();
         } else {
